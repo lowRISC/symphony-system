@@ -1,0 +1,5 @@
+[
+  { "name": "full 0", "bits": 1, "rotate": -90 },
+  { "name": "full 1", "bits": 1, "rotate": -90 },
+  { "bits": 30 }
+]

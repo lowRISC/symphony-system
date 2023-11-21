@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="80" viewBox="0 0 640 80">
+  <g transform="translate(0.5,0.5)" text-anchor="middle" font-size="12" font-family="sans-serif" font-weight="normal">
+    <g transform="translate(4,18)">
+      <g stroke="black" stroke-width="1" stroke-linecap="round">
+        <line x2="631"/>
+        <line y2="58"/>
+        <line x2="631" y1="58" y2="58"/>
+        <line x1="631" x2="631" y2="58"/>
+        <line x1="611" x2="611" y2="7"/>
+        <line x1="611" x2="611" y1="58" y2="51"/>
+        <line x1="592" x2="592" y2="7"/>
+        <line x1="592" x2="592" y1="58" y2="51"/>
+        <line x1="572" x2="572" y2="7"/>
+        <line x1="572" x2="572" y1="58" y2="51"/>
+        <line x1="552" x2="552" y2="7"/>
+        <line x1="552" x2="552" y1="58" y2="51"/>
+        <line x1="532" x2="532" y2="7"/>
+        <line x1="532" x2="532" y1="58" y2="51"/>
+        <line x1="513" x2="513" y2="7"/>
+        <line x1="513" x2="513" y1="58" y2="51"/>
+        <line x1="493" x2="493" y2="7"/>
+        <line x1="493" x2="493" y1="58" y2="51"/>
+        <line x1="473" x2="473" y2="58"/>
+        <line x1="454" x2="454" y2="7"/>
+        <line x1="454" x2="454" y1="58" y2="51"/>
+        <line x1="434" x2="434" y2="7"/>
+        <line x1="434" x2="434" y1="58" y2="51"/>
+        <line x1="414" x2="414" y2="7"/>
+        <line x1="414" x2="414" y1="58" y2="51"/>
+        <line x1="394" x2="394" y2="7"/>
+        <line x1="394" x2="394" y1="58" y2="51"/>
+        <line x1="375" x2="375" y2="7"/>
+        <line x1="375" x2="375" y1="58" y2="51"/>
+        <line x1="355" x2="355" y2="7"/>
+        <line x1="355" x2="355" y1="58" y2="51"/>
+        <line x1="335" x2="335" y2="7"/>
+        <line x1="335" x2="335" y1="58" y2="51"/>
+        <line x1="316" x2="316" y2="7"/>
+        <line x1="316" x2="316" y1="58" y2="51"/>
+        <line x1="296" x2="296" y2="7"/>
+        <line x1="296" x2="296" y1="58" y2="51"/>
+        <line x1="276" x2="276" y2="7"/>
+        <line x1="276" x2="276" y1="58" y2="51"/>
+        <line x1="256" x2="256" y2="7"/>
+        <line x1="256" x2="256" y1="58" y2="51"/>
+        <line x1="237" x2="237" y2="7"/>
+        <line x1="237" x2="237" y1="58" y2="51"/>
+        <line x1="217" x2="217" y2="7"/>
+        <line x1="217" x2="217" y1="58" y2="51"/>
+        <line x1="197" x2="197" y2="7"/>
+        <line x1="197" x2="197" y1="58" y2="51"/>
+        <line x1="177" x2="177" y2="7"/>
+        <line x1="177" x2="177" y1="58" y2="51"/>
+        <line x1="158" x2="158" y2="7"/>
+        <line x1="158" x2="158" y1="58" y2="51"/>
+        <line x1="138" x2="138" y2="7"/>
+        <line x1="138" x2="138" y1="58" y2="51"/>
+        <line x1="118" x2="118" y2="7"/>
+        <line x1="118" x2="118" y1="58" y2="51"/>
+        <line x1="99" x2="99" y2="7"/>
+        <line x1="99" x2="99" y1="58" y2="51"/>
+        <line x1="79" x2="79" y2="7"/>
+        <line x1="79" x2="79" y1="58" y2="51"/>
+        <line x1="59" x2="59" y2="7"/>
+        <line x1="59" x2="59" y1="58" y2="51"/>
+        <line x1="39" x2="39" y2="7"/>
+        <line x1="39" x2="39" y1="58" y2="51"/>
+        <line x1="20" x2="20" y2="7"/>
+        <line x1="20" x2="20" y1="58" y2="51"/>
+      </g>
+      <g>
+        <g>
+          <rect width="473" height="58" field="undefined" style="fill-opacity:0.1"/>
+        </g>
+        <g transform="translate(10,-10)">
+          <g transform="translate(611)">
+            <text y="6">0</text>
+          </g>
+          <g transform="translate(473)">
+            <text y="6">7</text>
+          </g>
+          <g transform="translate(454)">
+            <text y="6">8</text>
+          </g>
+          <g transform="translate(0)">
+            <text y="6">31</text>
+          </g>
+        </g>
+        <g transform="translate(10,28)">
+          <g transform="translate(542)">
+            <text y="6">
+              <tspan>cmd</tspan>
+            </text>
+          </g>
+        </g>
+        <g transform="translate(10,64)"/>
+      </g>
+    </g>
+  </g>
+</svg>
+

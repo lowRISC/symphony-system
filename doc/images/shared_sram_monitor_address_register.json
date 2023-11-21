@@ -1,0 +1,5 @@
+[
+  { "name": "valid", "bits": 1, "rotate": -90 },
+  { "bits": 1 },
+  { "name": "addr[31:2]", "bits": 30}
+]
