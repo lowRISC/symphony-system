@@ -1,0 +1,8 @@
+[
+  { "name": "x", "bits": 1 },
+  { "name": "w", "bits": 1 },
+  { "name": "r", "bits": 1 },
+  { "bits": 1 },
+  { "name": "status", "bits": 2, "rotate": -90  },
+  { "bits": 26 }
+]

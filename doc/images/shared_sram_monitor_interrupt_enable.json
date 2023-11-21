@@ -1,0 +1,5 @@
+[
+  { "name": "intr_en_0", "bits": 1, "rotate": -90 },
+  { "name": "intr_en_1", "bits": 1, "rotate": -90 },
+  { "bits": 30 }
+]
