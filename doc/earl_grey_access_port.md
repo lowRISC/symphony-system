@@ -75,7 +75,12 @@ They translate to fixed addresses inside of the Earl Grey address space.
 
 *Read-write*
 
-<p align="center"><img src="images/access_port_region_register.svg" width="800"></p>
+```wavejson_reg
+[
+  { "name": "region_addr", "bits": 30 },
+  { "bits": 2 }
+]
+```
 
 There are 4 region registers (one for each supported region).
 Both the base address and size of the region are encoded in the `region_addr` field using the same NAPOT encoding scheme used by PMP addresses in the RISC-V privileged architecture (see Table 3.11 in the privileged architecture version 20211203).
@@ -101,7 +106,14 @@ Configured regions always take priority over the fixed regions.
 
 *Read-write*
 
-<p align="center"><img src="images/access_port_translation_register.svg" width="800"></p>
+```wavejson_reg
+[
+  { "name": "x", "bits": 1 },
+  { "name": "w", "bits": 1 },
+  { "name": "r", "bits": 1 },
+  { "name": "translation_addr", "bits": 29 }
+]
+```
 
 There are 4 translation registers (one for each supported region).
 The translation register provides the base address of the region an allowed transaction is mapped into.
@@ -118,8 +130,11 @@ The 3 fixed regions have Translation registers but only the permission bits are 
 ### Pending Transaction Address
 
 *Read-only*, writes are ignored.
-
-<p align="center"><img src="images/access_port_pending_transaction_address_register.svg" width="800"></p>
+```wavejson_reg
+[
+  { "name": "address", "bits": 32}
+]
+```
 
 When a transaction is being held by the access port this register gives its address (in Sonata address space).
 It is guaranteed the value in this register remains constant when `valid` is set in the Pending Transaction Access Register until a write to the Decision Register occurs.
@@ -128,7 +143,15 @@ It is guaranteed the value in this register remains constant when `valid` is set
 
 *Read-only*, writes are ignored.
 
-<p align="center"><img src="images/access_port_pending_transaction_access_register.svg" width="800"></p>
+```wavejson_reg
+[
+  { "name": "x", "bits": 1 },
+  { "name": "w", "bits": 1 },
+  { "name": "r", "bits": 1 },
+  { "name": "valid", "bits": 1, "rotate": -90 },
+  { "bits": 28 }
+]
+```
 
 When a transaction is being held by the access port this register provide information about what it wants to do.
 `valid` indicates there is a transaction being held.
@@ -139,8 +162,12 @@ It is guaranteed the value in this register remains constant when `valid` is set
 
 *Write-only*, reads always return 0.
 
-<p align="center"><img src="images/access_port_decision_register.svg" width="800"></p>
-
+```wavejson_reg
+[
+  { "name": "cmd", "bits" : 8 },
+  { "bits": 24 }
+]
+```
 
 When a transaction is being held by the access port writing to this register tells the access port what to do with it.
 Either it is accepted or rejected.
@@ -163,8 +190,11 @@ These values have been chosen so they have a Hamming distance of 4 between them 
 
 *Read-only*, writes are ignored.
 
-<p align="center"><img src="images/access_port_last_error_address.svg" width="800"></p>
-
+```wavejson_reg
+[
+  { "name": "error_addr", "bits": 32 }
+]
+```
 
 When a transaction has produced an error response the address of that transaction is held in this register.
 It is guaranteed to remain constant until the next transaction enters the access port.
@@ -173,8 +203,16 @@ It is guaranteed to remain constant until the next transaction enters the access
 
 *Read-only*, writes are ignored.
 
-<p align="center"><img src="images/access_port_last_error_info.svg" width="800"></p>
-
+```wavejson_reg
+[
+  { "name": "x", "bits": 1 },
+  { "name": "w", "bits": 1 },
+  { "name": "r", "bits": 1 },
+  { "bits": 1 },
+  { "name": "status", "bits": 2, "rotate": -90  },
+  { "bits": 26 }
+]
+```
 
 When a transaction has produced an error response this register provides additional information about that error.
 
