@@ -1,7 +1,0 @@
-[
-  { "name": "x", "bits": 1 },
-  { "name": "w", "bits": 1 },
-  { "name": "r", "bits": 1 },
-  { "name": "valid", "bits": 1, "rotate": -90 },
-  { "bits": 28 }
-]

@@ -1,6 +1,0 @@
-[
-  { "name": "x", "bits": 1 },
-  { "name": "w", "bits": 1 },
-  { "name": "r", "bits": 1 },
-  { "name": "translation_addr", "bits": 29 }
-]

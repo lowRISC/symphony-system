@@ -1,6 +1,0 @@
-[
-  { "name": "pwr_en", "bits": 8},
-  { "name": "clk_en", "bits": 8},
-  { "name": "reset", "bits": 8},
-  { "bits": 8}
-]

@@ -18,7 +18,11 @@ Hardware does nothing to assist in this, software defined messages should includ
 
 *Read-write*
 
-<p align="center"><img src="images/mailbox_message_register.svg" width="800"></p>
+```wavejson_reg
+[
+  { "name": "message", "bits": 32}
+]
+```
 
 Register that holds a message, it is either in a full or empty state.
 Each message register has a fixed sender and recepient.
@@ -35,7 +39,13 @@ Writes from the sender are ignored in the full state and reads from the recipien
 
 *Read-only*, writes are ignored.
 
-<p align="center"><img src="images/mailbox_status_register.svg" width="800"></p>
+```wavejson_reg
+[
+  { "name": "full 0", "bits": 1, "rotate": -90 },
+  { "name": "full 1", "bits": 1, "rotate": -90 },
+  { "bits": 30 }
+]
+```
 
 Indicates empty/full status of each message register.
 `full 0` is the status of message 0 and `full 1` is the status of message 1.
@@ -44,7 +54,12 @@ Indicates empty/full status of each message register.
 
 *Read-write*
 
-<p align="center"><img src="images/mailbox_interrupt_enable_register.svg" width="800"></p>
+```wavejson_reg
+[
+  { "name": "intr_en", "bits": 1, "rotate": -90 },
+  { "bits" : 31}
+]
+```
 
 The `intr_en` field control the interrupt enable for either Sonata or Earl Grey (there is a separate enable register for each).
 If an interrupt is disabled but has been triggered (the corresponding message register is full) then enabling the interrupt will cause it be immediately raised.

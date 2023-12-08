@@ -21,7 +21,13 @@ This means there are two write monitors in total, each with its own address to m
 
 *Read-write*
 
-<p align="center"><img src="images/shared_sram_monitor_address_register.svg" width="800"></p>
+```wavejson_reg
+[
+  { "name": "valid", "bits": 1, "rotate": -90 },
+  { "bits": 1 },
+  { "name": "addr[31:2]", "bits": 30}
+]
+```
 
 `addr` gives the address to monitor within a particular SRAM bank.
 This is an aligned address and as such the bottom 2 bits are not required.
@@ -31,7 +37,13 @@ When the `valid` bit is set any write within that 32-bit region triggers the int
 
 *Read-write*
 
-<p align="center"><img src="images/shared_sram_monitor_interrupt_status.svg" width="800"></p>
+```wavejson_reg
+[
+  { "name": "intr_0", "bits": 1, "rotate": -90 },
+  { "name": "intr_1", "bits": 1, "rotate": -90 },
+  { "bits": 30 }
+]
+```
 
 The `intr_0` and `intr_1` fields indicate whether the interrupt for the write monitor of bank 0 and 1 monitor have been triggered, respectively.
 Writing 0 to these fields acknowledges and clears the interrupt.
@@ -40,7 +52,13 @@ Writing 0 to these fields acknowledges and clears the interrupt.
 
 *Read-write*
 
-<p align="center"><img src="images/shared_sram_monitor_interrupt_enable.svg" width="800"></p>
+```wavejson_reg
+[
+  { "name": "intr_en_0", "bits": 1, "rotate": -90 },
+  { "name": "intr_en_1", "bits": 1, "rotate": -90 },
+  { "bits": 30 }
+]
+```
 
 The `intr_en_0` and `intr_en_1` fields control the enable for interrupts 0 and 1.
 If an interrupt is disabled but has been triggered (the corresponding `intr_0` or `intr_1` is set) then enabling the interrupt will cause it be immediately raised with Earl Grey.

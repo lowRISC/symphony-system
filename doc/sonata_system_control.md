@@ -20,7 +20,14 @@ The block handles all clock and reset domain crossing requirements.
 
 *Read-write*
 
-<p align="center"><img src="images/sonata_system_control_register.svg" width="800"></p>
+```wavejson_reg
+[
+  { "name": "pwr_en", "bits": 8},
+  { "name": "clk_en", "bits": 8},
+  { "name": "reset", "bits": 8},
+  { "bits": 8}
+]
+```
 
 `pwr_en` and `clk_en` control the power and clock enables respectively.
 `reset` asserts and deasserts the reset.
@@ -42,7 +49,11 @@ It is not recommended you use the other values for `Disabled` as the recommended
 
 *Read-write*
 
-<p align="center"><img src="images/sonata_system_boot_vector_register.svg" width="800"></p>
+```wavejson_reg
+[
+  { "name": "boot_vec", "bits": 32}
+]
+```
 
 Specifies the address (in Sonata address space) that Sonata boots from.
 
