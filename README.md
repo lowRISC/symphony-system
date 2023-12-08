@@ -10,6 +10,16 @@ In the meantime, please read the [architecture specfication](./doc/architecture/
 
 Symphony is part of the [Sunburst Project](https://www.sunburst-project.org) funded by [UKRI](https://www.ukri.org/) / [DSbD](https://www.dsbd.tech/).
 
+## Building Documentation
+
+The documentation uses [mdBook](https://rust-lang.github.io/mdBook/) see the [installation guide](https://rust-lang.github.io/mdBook/guide/installation.html) for further details on installation.
+
+Once mdBook is installed the documentation can be built and viewed with:
+
+```bash
+mdbook serve --open
+```
+
 ## License
 
 Unless otherwise noted, everything in the repository is covered by the [Apache License](https://www.apache.org/licenses/LICENSE-2.0.html), Version 2.0. See the [LICENSE](https://github.com/lowRISC/sonata-system/blob/main/LICENSE) file for more information on licensing.
