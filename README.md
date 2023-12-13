@@ -40,6 +40,12 @@ To automatically fix some lints and formats use:
 nix run .#python_fix
 ```
 
+To automatically format Nix files use:
+
+```sh
+nix fmt
+```
+
 ## License
 
 Unless otherwise noted, everything in the repository is covered by the [Apache License](https://www.apache.org/licenses/LICENSE-2.0.html), Version 2.0. See the [LICENSE](https://github.com/lowRISC/symphony-system/blob/main/LICENSE) file for more information on licensing.
