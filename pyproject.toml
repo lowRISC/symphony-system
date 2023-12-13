@@ -1,0 +1,6 @@
+[tool.mypy]
+strict = true
+
+[tool.ruff]
+exclude = [ ".git", "book" ]
+line-length = 79
