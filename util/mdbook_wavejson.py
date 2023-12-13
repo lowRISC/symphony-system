@@ -13,18 +13,21 @@ import re
 
 from mdbook import utils as md_utils
 
-WAVEJSON_REG_FIXED_CONFIG = r'''
+WAVEJSON_REG_FIXED_CONFIG = r"""
     {"fontsize": 14,
      "lanes": 1,
      "vspace": 100,
      "hspace": 800,
      "fontfamily": "sans-serif",
      "fontweight": "normal",
-     "compact": false}'''
+     "compact": false}"""
 
 WAVEJSON_REG_PATTERN = re.compile("```wavejson_reg\n(.+?)\n```", re.DOTALL)
-WAVEJSON_REG_REPLACE = (r'<script type="WaveDrom">{ "reg": \1, "config":' +
-    WAVEJSON_REG_FIXED_CONFIG + r'}</script>')
+WAVEJSON_REG_REPLACE = (
+    r'<script type="WaveDrom">{ "reg": \1, "config":'
+    + WAVEJSON_REG_FIXED_CONFIG
+    + r"}</script>"
+)
 
 WAVEJSON_PATTERN = re.compile("```wavejson\n(.+?)\n```", re.DOTALL)
 WAVEJSON_REPLACE = r'<script type="WaveDrom">\1</script>'
@@ -32,7 +35,10 @@ WAVEJSON_REPLACE = r'<script type="WaveDrom">\1</script>'
 
 def main() -> None:
     if len(sys.argv) > 2:
-        if (sys.argv[1], sys.argv[2]) == ("supports", "html"):
+        if (sys.argv[1], sys.argv[2]) == (
+            "supports",
+            "html",
+        ):
             sys.exit(0)
         else:
             sys.exit(1)
@@ -41,10 +47,12 @@ def main() -> None:
     context, book = json.load(sys.stdin)
 
     for chapter in md_utils.chapters(book["sections"]):
-        chapter["content"] = \
-            WAVEJSON_REG_PATTERN.sub(WAVEJSON_REG_REPLACE, chapter["content"])
-        chapter["content"] = \
-            WAVEJSON_PATTERN.sub(WAVEJSON_REPLACE, chapter["content"])
+        chapter["content"] = WAVEJSON_REG_PATTERN.sub(
+            WAVEJSON_REG_REPLACE, chapter["content"]
+        )
+        chapter["content"] = WAVEJSON_PATTERN.sub(
+            WAVEJSON_REPLACE, chapter["content"]
+        )
 
     # dump the book into stdout
     print(json.dumps(book))
