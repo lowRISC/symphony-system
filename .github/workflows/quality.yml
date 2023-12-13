@@ -16,5 +16,8 @@ jobs:
       - name: Install Nix
         uses: cachix/install-nix-action@v24
 
-      - name: Run Python Check
+      - name: Python Check
         run: nix run .#python_check
+
+      - name: Nix Format Check
+        run: nix fmt -- . --check

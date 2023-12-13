@@ -28,7 +28,7 @@
       };
       python_fix_app = pkgs.writeShellApplication {
         name = "python-fix";
-        runtimeInputs = with pkgs; [ ruff ];
+        runtimeInputs = [pkgs.ruff];
         text = ''
           ruff format .
           ruff check --fix .
