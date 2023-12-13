@@ -10,14 +10,34 @@ In the meantime, please read the [architecture specfication](./doc/architecture.
 
 Symphony is part of the [Sunburst Project](https://www.sunburst-project.org) funded by [UKRI](https://www.ukri.org/) / [DSbD](https://www.dsbd.tech/).
 
-## Building Documentation
+## Contributing
+### Installing Nix
+
+The Nix package manager is used to create reproducible builds and consistent development environments.
+Follow the instructions on [the official download page](https://nixos.org/download.html) to install the Nix package manager.
+
+### Building Documentation
 
 The documentation uses [mdBook](https://rust-lang.github.io/mdBook/) see the [installation guide](https://rust-lang.github.io/mdBook/guide/installation.html) for further details on installation.
 
 Once mdBook is installed the documentation can be built and viewed with:
 
-```bash
+```sh
 mdbook serve --open
+```
+
+### Code Quality
+
+To check the python code run:
+
+```sh
+nix run .#python_check
+```
+
+To automatically fix some lints and formats use:
+
+```sh
+nix run .#python_fix
 ```
 
 ## License
