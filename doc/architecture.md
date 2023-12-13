@@ -10,7 +10,7 @@ In particular whilst due consideration will be given towards security hardening 
 
 The Symphony architecture comprises a number of components:
 - FPGA configuration architecture:
-  What changes do we make to [Sonata](https://github.com/lowRISC/sonata-system), what changes to we make to [OpenTitan Earl Grey](https://github.com/lowRISC/opentitan) and how do we connect the two together?
+  What changes do we make to [Sonata](https://github.com/lowRISC/sonata-system), what changes to we make to [OpenTitan Earl Grey](https://opentitan.org/book/hw/top_earlgrey/doc/datasheet.html) and how do we connect the two together?
   It defines everything we are using a hardware description language for.
 - Software architecture:
   How do we compose Earl Grey and Sonata together?
