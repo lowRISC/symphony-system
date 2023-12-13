@@ -1,12 +1,12 @@
 # Symphony system
 
 Symphony is a system for evaluating the usage of [CHERIoT Ibex core](https://github.com/microsoft/cheriot-ibex) as a microcontroller for embedded, IoT and Operational Technology applications that require the use of a root of trust
-The system is an integration of a [Sonata system](https://github.com/lowRISC/sonata-system) (containing a [CHERIoT Ibex core](https://github.com/microsoft/cheriot-ibex)) with [OpenTitan Earl Grey](https://github.com/lowRISC/opentitan)
-It is designed for use on FPGA and specifically targets the [Sonata FPGA board](./doc/architecture/board.md).
+The system is an integration of a [Sonata system](https://github.com/lowRISC/sonata-system) (containing a [CHERIoT Ibex core](https://github.com/microsoft/cheriot-ibex)) with [OpenTitan Earl Grey](https://opentitan.org/book/hw/top_earlgrey/doc/datasheet.html).
+It is designed for use on FPGA and specifically targets the [NewAE CW340](https://media.newae.com/datasheets/NAE-CW340-OTKIT_datasheet.pdf).
 
 The system is at its architectural definition and specification stage.
 RTL development has yet to begin.
-In the meantime, please read the [architecture specfication](./doc/architecture/intro.md).
+In the meantime, please read the [architecture specfication](./doc/architecture.md).
 
 Symphony is part of the [Sunburst Project](https://www.sunburst-project.org) funded by [UKRI](https://www.ukri.org/) / [DSbD](https://www.dsbd.tech/).
 
