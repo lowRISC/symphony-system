@@ -14,7 +14,8 @@ Symphony is part of the [Sunburst Project](https://www.sunburst-project.org) fun
 ### Installing Nix
 
 The Nix package manager is used to create reproducible builds and consistent development environments.
-Follow the instructions on [the official download page](https://nixos.org/download.html) to install the Nix package manager.
+Follow the instructions on [the zero to nix site](https://zero-to-nix.com/start/install) to install the Nix package manager.
+*If you've downloaded nix through another method, make sure the experimental features ["flakes"](https://nixos.wiki/wiki/Flakes) and ["nix-command"](https://nixos.wiki/wiki/Nix_command) are enabled.*
 
 ### Building Documentation
 
