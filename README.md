@@ -31,13 +31,13 @@ mdbook serve --open
 To check the python code run:
 
 ```sh
-nix run .#python_check
+nix run .#lint_python
 ```
 
 To automatically fix some lints and formats use:
 
 ```sh
-nix run .#python_fix
+nix run .#lint_python -- fix
 ```
 
 To automatically format Nix files use:
