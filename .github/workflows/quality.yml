@@ -17,7 +17,7 @@ jobs:
         uses: cachix/install-nix-action@v24
 
       - name: Python Check
-        run: nix run .#python_check
+        run: nix run .#lint_python
 
       - name: Nix Format Check
         run: nix fmt -- . --check

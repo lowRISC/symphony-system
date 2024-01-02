@@ -14,35 +14,31 @@
         inherit system;
       };
       python_check_app = pkgs.writeShellApplication {
-        name = "python-check";
+        name = "lint-python";
         runtimeInputs = with pkgs; [
           ruff
           python311
           python311Packages.mypy
         ];
         text = ''
-          ruff format --check .
-          ruff check .
-          mypy .
-        '';
-      };
-      python_fix_app = pkgs.writeShellApplication {
-        name = "python-fix";
-        runtimeInputs = [pkgs.ruff];
-        text = ''
-          ruff format .
-          ruff check --fix .
+          if [ "''${1:-}" == "fix" ]
+          then
+            echo "Fixing Python"
+            ruff format .
+            ruff check --fix .
+          else
+            echo "Checking Python"
+            ruff format --check .
+            ruff check .
+            mypy .
+          fi
         '';
       };
     in {
       formatter = pkgs.alejandra;
-      apps.python_check = {
+      apps.lint_python = {
         type = "app";
-        program = "${python_check_app}/bin/python-check";
-      };
-      apps.python_fix = {
-        type = "app";
-        program = "${python_fix_app}/bin/python-fix";
+        program = "${python_check_app}/bin/lint-python";
       };
     };
   in
